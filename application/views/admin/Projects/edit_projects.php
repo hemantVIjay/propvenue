@@ -29,15 +29,15 @@
                   </div>
 				  <div class="col-md-6 mb-3">
                      <label class="required">Title</label>
-                     <input type="text" class="form-control" name="title" autocomplete="Off" placeholder="Title"/>
+                     <input type="text" class="form-control" name="title" autocomplete="Off" placeholder="Title" value="<?= $info->title; ?>"/>
                   </div>
 				  <div class="col-md-6 mb-3">
                      <label class="required">Summary & Description (Meta Tag)</label>
-                     <textarea type="text" class="form-control" name="meta_description" autocomplete="Off" placeholder="Summary & Description (Meta Tag)"></textarea>
+                     <textarea type="text" class="form-control" name="meta_description" autocomplete="Off" placeholder="Summary & Description (Meta Tag)"><?= $info->meta_description; ?></textarea>
                   </div>
 				  <div class="col-md-6 mb-3">
                      <label class="required">Keywords (Meta Tag)</label>
-                     <textarea type="text" class="form-control" name="meta_keywords" autocomplete="Off" placeholder="Keywords (Meta Tag)"></textarea>
+                     <textarea type="text" class="form-control" name="meta_keywords" autocomplete="Off" placeholder="Keywords (Meta Tag)"><?= $info->meta_keywords; ?></textarea>
                   </div>
 				  <div class="col-md-3 mb-3">
                      <label class="required">Is Featured</label>
