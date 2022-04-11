@@ -1,0 +1,10 @@
+<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" stroke="#ffa506" fill="#ffffff">
+<g fill="none" fill-rule="evenodd">
+<g transform="translate(1 1)" stroke-width="2" fill="#ffffff">
+<circle stroke-opacity=".15" cx="23" cy="23" r="23"/>
+<path d="M46 23c0-9.94-8.06-23-23-23"><animateTransform attributeName="transform" type="rotate" from="0 23 23" to="360 23 23" dur="1s" repeatCount="indefinite"/>
+</path>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" x="22%" y="24%" stroke="none" dominant-baseline="central"><g transform="translate(-385.857 -181.857)"><rect width="24" height="24" transform="translate(385.857 181.857)" fill="none"/><g transform="translate(389.557 182)"><g transform="translate(0 0)"><g transform="translate(0)"><path d="M27.06,18.5H25.224a1.613,1.613,0,0,0-1.53,1.677V41.166a1,1,0,0,0,.956,1.048h2.983a1,1,0,0,0,.956-1.048V20.177A1.614,1.614,0,0,0,27.06,18.5Z" transform="translate(-23.693 -18.5)" fill="#ef9300"/><path d="M35.785,35.365H28.479c-2.638,0-4.779-2.472-4.779-5.519v-9.58A1.666,1.666,0,0,1,25.23,18.5H35.785c2.639,0,4.78,2.472,4.78,5.519v5.828C40.565,32.893,38.423,35.365,35.785,35.365Z" transform="translate(-23.699 -18.5)" fill="#ffa506"/><g transform="translate(2.296 2.773)"><path d="M47.976,39.138,41.857,33l-.019.019V33L35.7,39.138,37,40.42l4.838-4.838,4.857,4.838Z" transform="translate(-35.7 -33)" fill="#fff"/><rect width="1.836" height="4.803" rx="0.918" transform="translate(7.001 10.762) rotate(180)" fill="#fff"/></g></g></g></g></g></svg>
+</g>
+</g>
+</svg>
