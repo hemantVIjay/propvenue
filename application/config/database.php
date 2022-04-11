@@ -78,7 +78,6 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-	//'database' => 'desimurga',
 	'database' => 'propv_db',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
