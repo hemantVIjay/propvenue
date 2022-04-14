@@ -57,9 +57,7 @@
             </div>
          </div>
          <div class="col-md-3">
-			<div class="card pveq-card" id="eqbx">
             <?php include('enquiry-form.php'); ?>
-			</div>
          </div>
       </div>
    </div>
@@ -341,7 +339,7 @@
    </div>
 </div>
 
-
+<button class="btnFxdBtm btn btn-lg btn-pill btn-primary d-md-none"><i class="bi bi-chat-left-text me-2"></i>Cantact with us</button>
 
 <script src="<?= base_url(); ?>assets/plugins/gallery/jquery.fancybox.min.js"></script>
 <script>
@@ -425,6 +423,17 @@
    }
    });
    });
+   
+   $(function() {
+  $('.btnFxdBtm').click(function () {
+     $( "#eqbx.card.pveq-card.eqbx-fixed" ).css('margin-top','-419px');
+	 $('.btnFxdBtm').hide();
+  });
+  $('.btnClose').click(function () {
+     $( "#eqbx.card.pveq-card.eqbx-fixed" ).css('margin-top','0');
+	 $('.btnFxdBtm').show();
+  });
+});
    
 
 

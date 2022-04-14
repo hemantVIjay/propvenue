@@ -7,7 +7,7 @@
       </div>
                <form name="call_back" id="call_back" onsubmit="return save_enquiries(this);" method="POST">
 			   <div class="p-4">
-                  <h4 class="cmn-title mb-3">Contact with us</h4>
+                  <h4 class="cmn-title mb-3 d-flex justify-content-between align-items-center">Contact with us <span class="btnClose d-md-none"><i class="bi bi-x-lg"></i><span></h4>
                   <div class="mb-3">
                      <label class="required">Full Name</label>
                      <input type="text" class="form-control" placeholder="Enter your name" name="full_name" id="full_name"/>
