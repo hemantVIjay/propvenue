@@ -1589,7 +1589,7 @@ table.table tr td, table.table tr th{
 	bottom:2px;
 	left:50%;
 	transform:translate(-50%);
-	width:360px;
+	width:330px;
 	max-width:100%;
 }
 
@@ -1662,7 +1662,7 @@ table.table tr td, table.table tr th{
 #eqbx.card.pveq-card.eqbx-fixed{
 	    top: 100% !important;
     /* margin-top: -419px; */
-	width:360px;
+	width:330px;
 	max-width:100%;
 	left: 50%;
     transform: translate(-50%);

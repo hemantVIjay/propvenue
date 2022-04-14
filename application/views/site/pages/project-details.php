@@ -426,7 +426,7 @@
    
    $(function() {
   $('.btnFxdBtm').click(function () {
-     $( "#eqbx.card.pveq-card.eqbx-fixed" ).css('margin-top','-419px');
+     $( "#eqbx.card.pveq-card.eqbx-fixed" ).css('margin-top','-470px');
 	 $('.btnFxdBtm').hide();
   });
   $('.btnClose').click(function () {
