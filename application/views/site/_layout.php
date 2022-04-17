@@ -134,7 +134,7 @@
             <div class="row">
                <div class="col-md-6">
                   <div class="row">
-                     <div class="col-md-6">
+                     <div class="col-md-6 mb-3 mb-md-0">
                         <img src="<?= base_url(); ?>assets/images/logo.svg" class="img-fluid ft-logo">
                         <div class="cmp-txt mt-3 mb-4">@Various independent surveys have rated it as India's most popular real estate platform.</div>
                         <div class="tlfr mb-1">Toll Free - 1800 88 88888</div>
@@ -167,7 +167,7 @@
                            </a>
                         </div>
                      </div>
-                     <div class="col-md-3">
+                     <div class="col-md-3 col-sm-6 col-6 mb-3 mb-md-0">
                         <h6 class="foot-title">Info Links</h6>
                         <ul class="ftm-link">
                            <li><a href="<?= base_url(); ?>about-us">About Us</a></li>
@@ -181,7 +181,7 @@
                            <li><a href="javascript:;">Advertise With us</a></li>
                         </ul>
                      </div>
-                     <div class="col-md-3">
+                     <div class="col-md-3 col-sm-6 col-6 mb-3 mb-md-0">
                         <h6 class="foot-title">Resources</h6>
                         <ul class="ftm-link">
                            <li><a href="javascript:;">Home Loan</a></li>

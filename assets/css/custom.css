@@ -1591,6 +1591,12 @@ table.table tr td, table.table tr th{
 	transform:translate(-50%);
 	width:330px;
 	max-width:100%;
+	z-index: 1;
+	    font-size: 1rem;
+    font-weight: 600;
+}
+.btnFxdBtm .bi{
+    vertical-align: middle;
 }
 
 
@@ -1673,6 +1679,36 @@ table.table tr td, table.table tr th{
 }
 #mainNav.navigation .container .navigation__link {
     white-space: nowrap;
+}
+.table.table-fppv {
+    table-layout: fixed;
+    table-layout: auto;
+}
+.fppv-tblwrp{
+	    max-width: 100%;
+    overflow-x: auto;
+}
+.table-fppv tr th{
+	    white-space: nowrap;
+    min-width: 100px;
+}
+.vpvtab {
+	    flex-wrap: wrap;
+}
+.vpvtab .nav-pills .nav-link{
+	    padding: 0.5rem;
+		    font-size: .745rem;
+}
+.vpvtab .tab-content{
+	    max-width: 100%;
+}
+.vpvtab .nav {
+    border-right: none;
+	border-bottom: 2px solid #efefef;
+}
+.vpvtab .nav-pills .nav-link.active, .vpvtab .nav-pills .show > .nav-link {
+    border-right: none;
+	border-bottom: 2px solid #ffa506;
 }
 }
 

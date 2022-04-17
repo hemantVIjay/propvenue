@@ -134,12 +134,12 @@
                   </li>
                   <?php } } ?>
                </ul>
-               <div class="tab-content py-4" id="myTabContent">
+               <div class="tab-content pt-4" id="myTabContent">
                   <?php if(isset($floors)&& !empty($floors)){ foreach($floors as $key=>$floor){ ?>
                   <div class="tab-pane fade <?php if($key==0){echo'show active'; }?>" id="bhka_<?=$key;?>" role="tabpanel" aria-labelledby="bhka1-tab">
                      <?php $floorPlans = $this->home->project_Floorplans($project_info->id, $floor->floor_bedrooms); ?>
                      <div class="vpvtab d-flex align-items-start">
-                        <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <div class="nav flex-md-column nav-pills me-md-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                            <?php if(isset($floorPlans)&& !empty($floorPlans)){ foreach($floorPlans as $ks=>$floorPlan){ ?>
                            <button class="nav-link <?php if($ks==0){echo'active'; }?>" id="plan_<?=$ks;?>-tab" data-bs-toggle="pill" data-bs-target="#plan<?=$key;?><?=$ks;?>" type="button" role="tab" aria-controls="plan<?=$ks;?>" aria-selected="true"><?= number_format($floorPlan->floor_size, 2); ?> SQ. FT</button>
                            <?php } } ?>
@@ -251,10 +251,10 @@
          <div class="spcr-bds"></div>
          <div class="page-section" id="3">
             <h4 class="cmn-title mb-4">Amenities</h4>
-            <div class="row gx-3">
+            <div class="row gx-md-3 gx-2">
                <?php $amenities  = $this->home->_amenities($project_info->project_amenities); 
                   if(!empty($amenities)){ foreach($amenities as $am){ ?>
-               <div class="col-xl-2 col-lg-3 col-md-4 col-6 text-center mb-3">
+               <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-4 text-center mb-3">
                   <div class="pv-amenit">
                      <img src="<?= base_url(); ?>uploads/amenities/<?= $am->icon; ?>" class="img-fluid">
                      <div class="pv-amenit-name"><?= $am->name; ?></div>
@@ -323,7 +323,7 @@
             <div class="row">
                <?php $banks  = $this->home->_banks($project_info->banks_available); 
                   if(!empty($banks)){ foreach($banks as $bb){ ?>
-               <div class="col-xl-2 col-md-3 col-sm-4 mb-3">
+               <div class="col-xl-2 col-md-3 col-sm-4 col-4 mb-3">
                   <div class="bnkcrd">
                      <img src="<?= base_url(); ?>uploads/banks/<?= $bb->icon; ?>" class="img-fluid">
                   </div>

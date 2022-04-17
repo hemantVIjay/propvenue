@@ -36,11 +36,11 @@
             <div class="mb-2">
                <input type="text" name="review_name" class="form-control" id="review_name" placeholder="Full Name">
             </div>
-            <div class="row mb-2">
-               <div class="col-md-6">
+            <div class="row gx-2 mb-2">
+               <div class="col-md-6 col-sm-6 col-6">
                   <input type="text" name="review_phone" class="form-control" id="review_phone" placeholder="Phone/Mobile Number" >
                </div>
-               <div class="col-md-6">
+               <div class="col-md-6 col-sm-6 col-6">
                   <input type="text" name="review_email" class="form-control" id="review_email" placeholder="Email Address">
                </div>
             </div>
