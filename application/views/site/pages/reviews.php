@@ -1,3 +1,51 @@
+<div class="row gx-2 mb-4">
+	<div class="col-sm-4 mb-3">
+		<div class="card">
+			<div class="card-body">
+				<span class="badge bg-success fw-bold">3.5/5<i class="bi bi-star-fill ms-2"></i></span>
+				<p class="my-3">Nice builder floor apartment. I have very good experience with the builder, good communication, good service, and nice people, flats are nice and basic facilities, metro connectivity is also there.</p>
+				<div class="d-flex">
+					<span class="rwsn text-center rounded-circle fw-bold fs-6">AB</span>
+					<div>
+						<div class="rwnm fw-bold">Amit Bharadwaj</div>
+						<div class="rwdt text-gray">20-Apr-2022</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<div class="col-sm-4 mb-3">
+		<div class="card">
+			<div class="card-body">
+				<span class="badge bg-danger fw-bold">1.5/5<i class="bi bi-star-fill ms-2"></i></span>
+				<p class="my-3">Nice builder floor apartment. I have very good experience with the builder, good communication, good service, and nice people, flats are nice and basic facilities, metro connectivity is also there.</p>
+				<div class="d-flex">
+					<span class="rwsn text-center rounded-circle fw-bold fs-6">RY</span>
+					<div>
+						<div class="rwnm fw-bold">Rajkumar Yadav</div>
+						<div class="rwdt text-gray">20-Apr-2022</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-4 mb-3">
+		<div class="card">
+			<div class="card-body">
+				<span class="badge bg-success fw-bold">4.5/5<i class="bi bi-star-fill ms-2"></i></span>
+				<p class="my-3">Nice builder floor apartment. I have very good experience with the builder, good communication, good service, and nice people, flats are nice and basic facilities, metro connectivity is also there.</p>
+				<div class="d-flex">
+					<span class="rwsn text-center rounded-circle fw-bold fs-6">RS</span>
+					<div>
+						<div class="rwnm fw-bold">Rini Saini</div>
+						<div class="rwdt text-gray">20-Apr-2022</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <form id="reviews" action="<?= base_url('home/save_review'); ?>" method="POST" enctype="multipart/form-data" accept-charset="utf-8" autocomplete="off">
    <input type="hidden" name="listing_id" id="listing_id" value="<?= _slugID($this->uri->segment(1)); ?>">
    <div class="rtnrvw">

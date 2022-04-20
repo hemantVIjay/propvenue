@@ -332,7 +332,20 @@
             </div>
          </div>
          <div class="page-section" id="6">
-            <h4 class="cmn-title mb-4">Ratings & Reviews</h4>
+			<div class="row">
+				<div class="col-xl-8 col-lg-7 col-md-6">
+					<h4 class="cmn-title mb-4">Ratings & Reviews</h4>
+				</div>
+				<div class="col-xl-4 col-lg-5 col-md-6">
+					<div class="rwc">
+						<div class="rwcb mb-2">
+							<span class="badge bg-success fw-bold me-2">3.5/5</span>
+							<span class="strrw"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i></span>
+						</div>
+						<div class="ttlrw">(24 Total Reviews)</div>
+					</div>
+				</div>
+			</div>
             <?php include('reviews.php'); ?>
          </div>
       </div>

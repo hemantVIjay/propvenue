@@ -1598,7 +1598,33 @@ table.table tr td, table.table tr th{
 .btnFxdBtm .bi{
     vertical-align: middle;
 }
-
+.rwdt {
+    font-size: .725rem;
+    color: #a3a29e;
+}
+.rwsn{
+	height:36px;
+	width:36px;
+	min-width:36px;
+	line-height:34px;
+	background: #efdec0;
+	margin-right:.75rem;
+}
+.strrw{
+	    font-size: 1.1rem;
+		line-height:1.1rem;
+		vertical-align: middle;
+}
+.strrw .bi{
+	color:#FFD700;
+	margin-right:.35rem;
+}
+.strrw .bi:last-child{
+	margin-right:0;
+}
+.ttlrw{
+	font-size:.745rem;
+}
 
 @media (min-width: 992px) {
 	.modal-lgn {
