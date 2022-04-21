@@ -21,6 +21,12 @@
       <script src="<?= base_url(); ?>assets/js/bootstrap.bundle.min.js"></script>
 	  <script src="<?= base_url(); ?>assets/js/site/<?= $class_name ?>.js"></script>
    </head>
+   <style>
+   .ui-widget.ui-widget-content{
+	   max-height:400px;
+	   overflow-y:scroll;
+   }
+   </style>
    <body data-spy="scroll" data-target=".navbar" data-offset="400">
       <div class="page-loader" id="page-loader" style="display:none;">
          <div class="ripple-loader">
