@@ -238,7 +238,7 @@
            $data['title']       = 'Propvenues.com';
            $data['description'] = 'Propvenues.com';
            $data['keywords']    = 'Propvenues.com';
-		   $data['is_search']   = TRUE;
+		   $data['is_search']   = FALSE;
            $data['sub_view'] = $this->load->view('site/pages/about-us', $data, TRUE);
            $this->load->view('site/_layout', $data);
        }
@@ -278,7 +278,7 @@
            $data['title']       = 'Propvenues.com';
            $data['description'] = 'Propvenues.com';
            $data['keywords']    = 'Propvenues.com';
-		   $data['is_search']   = TRUE;
+		   $data['is_search']   = FALSE;;
            $data['sub_view'] = $this->load->view('site/pages/careers', $data, TRUE);
            $this->load->view('site/_layout', $data);
        }
@@ -288,7 +288,7 @@
            $data['title']       = 'Propvenues.com';
            $data['description'] = 'Propvenues.com';
            $data['keywords']    = 'Propvenues.com';
-		   $data['is_search']   = TRUE;
+		   $data['is_search']   = FALSE;;
            $data['sub_view'] = $this->load->view('site/pages/partners', $data, TRUE);
            $this->load->view('site/_layout', $data);
        }
@@ -298,7 +298,7 @@
            $data['title']       = 'Propvenues.com';
            $data['description'] = 'Propvenues.com';
            $data['keywords']    = 'Propvenues.com';
-		   $data['is_search']   = TRUE;
+		   $data['is_search']   = FALSE;;
            $data['sub_view'] = $this->load->view('site/pages/contact-us', $data, TRUE);
            $this->load->view('site/_layout', $data);
        }
@@ -308,7 +308,7 @@
            $data['title']       = 'Propvenues.com';
            $data['description'] = 'Propvenues.com';
            $data['keywords']    = 'Propvenues.com';
-		   $data['is_search']   = TRUE;
+		   $data['is_search']   = FALSE;;
            $data['sub_view'] = $this->load->view('site/pages/feedback-review', $data, TRUE);
            $this->load->view('site/_layout', $data);
        }
@@ -318,7 +318,7 @@
            $data['title']       = 'Propvenues.com';
            $data['description'] = 'Propvenues.com';
            $data['keywords']    = 'Propvenues.com';
-		   $data['is_search']   = TRUE;
+		   $data['is_search']   = FALSE;;
            $data['sub_view'] = $this->load->view('site/pages/advertise-with-us', $data, TRUE);
            $this->load->view('site/_layout', $data);
        }
@@ -328,7 +328,7 @@
            $data['title']       = 'Propvenues.com';
            $data['description'] = 'Propvenues.com';
            $data['keywords']    = 'Propvenues.com';
-		   $data['is_search']   = TRUE;
+		   $data['is_search']   = FALSE;;
            $data['sub_view'] = $this->load->view('site/pages/home-loan', $data, TRUE);
            $this->load->view('site/_layout', $data);
        }
@@ -356,10 +356,16 @@
                            $i_arr[$image->image_type][$key] = $image;
                        }
                    }
+				   $p_arr = array('name'=>'project','parent_id'=>$id);
+                   $pc = _getlisting($p_arr);
+				   $reviews  = $this->home->all_reviews($pc->id);
+				   $avg_rating  = $this->home->avgRating($pc->id);
                    //$project_properties = $this->project->get_projectProperties($id[1]);
                    $data['project_info']      = $project_info;
                    $data['floor_plans']       = $project_info;
                    $data['properties_images'] = $i_arr;
+                   $data['project_reviews']   = $reviews;
+                   $data['avg_rating']        = $avg_rating;
                    $data['is_search']         = TRUE;
                    $data['sub_view']          = $this->load->view('site/pages/project-details', $data, TRUE);
                    $this->load->view('site/_layout', $data);
@@ -373,7 +379,7 @@
            $data['title']       = 'Propvenues.com';
            $data['description'] = 'Propvenues.com';
            $data['keywords']    = 'Propvenues.com';
-		   $data['is_search']   = TRUE;
+		   $data['is_search']   = FALSE;;
            $data['sub_view'] = $this->load->view('site/pages/price-trends', $data, TRUE);
            $this->load->view('site/_layout', $data);
        }
@@ -383,7 +389,7 @@
            $data['title']       = 'Propvenues.com';
            $data['description'] = 'Propvenues.com';
            $data['keywords']    = 'Propvenues.com';
-		   $data['is_search']   = TRUE;
+		   $data['is_search']   = FALSE;;
            $data['sub_view'] = $this->load->view('site/pages/offers', $data, TRUE);
            $this->load->view('site/_layout', $data);
        }
@@ -393,7 +399,7 @@
            $data['title']       = 'Propvenues.com';
            $data['description'] = 'Propvenues.com';
            $data['keywords']    = 'Propvenues.com';
-		   $data['is_search']   = TRUE;
+		   $data['is_search']   = FALSE;;
            $data['sub_view'] = $this->load->view('site/pages/emi-calculator', $data, TRUE);
            $this->load->view('site/_layout', $data);
        }
@@ -403,7 +409,7 @@
            $data['title']       = 'Propvenues.com';
            $data['description'] = 'Propvenues.com';
            $data['keywords']    = 'Propvenues.com';
-		   $data['is_search']   = TRUE;
+		   $data['is_search']   = FALSE;;
            $data['sub_view'] = $this->load->view('site/pages/social-media', $data, TRUE);
            $this->load->view('site/_layout', $data);
        }
@@ -413,7 +419,7 @@
            $data['title']       = 'Propvenues.com';
            $data['description'] = 'Propvenues.com';
            $data['keywords']    = 'Propvenues.com';
-		   $data['is_search']   = TRUE;
+		   $data['is_search']   = FALSE;;
            $data['sub_view'] = $this->load->view('site/pages/frequently-asked-questions', $data, TRUE);
            $this->load->view('site/_layout', $data);
        }
@@ -423,7 +429,7 @@
            $data['title']       = 'Propvenues.com';
            $data['description'] = 'Propvenues.com';
            $data['keywords']    = 'Propvenues.com';
-		   $data['is_search']   = TRUE;
+		   $data['is_search']   = FALSE;;
            $data['sub_view'] = $this->load->view('site/pages/safety-guide', $data, TRUE);
            $this->load->view('site/_layout', $data);
        }
@@ -433,7 +439,7 @@
            $data['title']       = 'Propvenues.com';
            $data['description'] = 'Propvenues.com';
            $data['keywords']    = 'Propvenues.com';
-		   $data['is_search']   = TRUE;
+		   $data['is_search']   = FALSE;;
            $data['sub_view'] = $this->load->view('site/pages/privacy-policy', $data, TRUE);
            $this->load->view('site/_layout', $data);
        }
@@ -443,7 +449,7 @@
            $data['title']       = 'Propvenues.com';
            $data['description'] = 'Propvenues.com';
            $data['keywords']    = 'Propvenues.com';
-		   $data['is_search']   = TRUE;
+		   $data['is_search']   = FALSE;;
            $data['sub_view'] = $this->load->view('site/pages/terms-of-uses', $data, TRUE);
            $this->load->view('site/_layout', $data);
        }
@@ -453,7 +459,7 @@
            $data['title']       = 'Propvenues.com';
            $data['description'] = 'Propvenues.com';
            $data['keywords']    = 'Propvenues.com';
-		   $data['is_search']   = TRUE;
+		   $data['is_search']   = FALSE;;
            $data['sub_view'] = $this->load->view('site/pages/refund-policy', $data, TRUE);
            $this->load->view('site/_layout', $data);
        }
@@ -463,7 +469,7 @@
            $data['title']       = 'Propvenues.com';
            $data['description'] = 'Propvenues.com';
            $data['keywords']    = 'Propvenues.com';
-		   $data['is_search']   = TRUE;
+		   $data['is_search']   = FALSE;;
            $data['sub_view'] = $this->load->view('site/pages/disclaimer', $data, TRUE);
            $this->load->view('site/_layout', $data);
        }
@@ -473,7 +479,7 @@
            $data['title']       = 'Propvenues.com';
            $data['description'] = 'Propvenues.com';
            $data['keywords']    = 'Propvenues.com';
-		   $data['is_search']   = TRUE;
+		   $data['is_search']   = FALSE;;
            $data['sub_view'] = $this->load->view('site/pages/profile', $data, TRUE);
            $this->load->view('site/_layout', $data);
        }
@@ -483,7 +489,7 @@
            $data['title']       = 'Propvenues.com';
            $data['description'] = 'Propvenues.com';
            $data['keywords']    = 'Propvenues.com';
-		   $data['is_search']   = TRUE;
+		   $data['is_search']   = FALSE;;
            $data['sub_view'] = $this->load->view('site/pages/post-property', $data, TRUE);
            $this->load->view('site/_layout', $data);
        }
@@ -539,7 +545,7 @@
            $data['title']       = 'Propvenues.com';
            $data['description'] = 'Propvenues.com';
            $data['keywords']    = 'Propvenues.com';
-		   $data['is_search']   = TRUE;
+		   $data['is_search']   = FALSE;;
            $categories         = $this->article_model->get_categories($params = array());
            $data['categories'] = $categories;
            $data['sub_view']   = $this->load->view('site/pages/knowledge-base', $data, TRUE);

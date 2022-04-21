@@ -339,10 +339,10 @@
 				<div class="col-xl-4 col-lg-5 col-md-6">
 					<div class="rwc">
 						<div class="rwcb mb-2">
-							<span class="badge bg-success fw-bold me-2">3.5/5</span>
+							<span class="badge bg-success fw-bold me-2"><?php echo number_format($avg_rating->avg_rating,1); ?>/5</span>
 							<span class="strrw"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i></span>
 						</div>
-						<div class="ttlrw">(24 Total Reviews)</div>
+						<div class="ttlrw">(<?php if(!empty($project_reviews)){ echo count($project_reviews); }else{ echo'0'; } ?> Total Reviews)</div>
 					</div>
 				</div>
 			</div>

@@ -126,7 +126,7 @@ class Home extends MY_Controller {
                         'stars' => $this->input->post('rating'),
                         'message' => $this->input->post('message'),
                         'user_id' => $this->get_user_id(),
-                        'date_publish' => date('Y-m-d')
+                        'date_publish' => date('Y-m-d H:i:s')
                     );
 		$result = $this->home->save_rating($post_data);
 		if ($result['status']==TRUE &&$result['label']=='SUCCESS') {

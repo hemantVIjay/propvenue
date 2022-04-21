@@ -524,13 +524,13 @@
          showAlert('warning', 'Please enter email Address.');
          return false;
       }
+	  var baseUrl = $('base').attr("href");
       //$('#page-loader').fadeIn();			   
 		$.ajax({
 			type: 'POST',
 			url: baseUrl + "home/save_review",
 			data: $('#reviews').serialize(),
 			dataType: 'json',
-			async: false,
 			success: function (response) {
 				var newData = JSON.stringify(response)
 				var res = JSON.parse(newData);

@@ -241,6 +241,26 @@ class Home_model extends MY_Model{
         return ($query->num_rows() > 0)?$query->result():FALSE;
 	}
 
+	public function all_reviews($id){		
+		$this->db->select('r.*');
+        $this->db->from('reviews r');
+		$this->db->where('r.listing_id',$id);
+		$this->db->where('r.is_visible','1');
+		$query = $this->db->get();
+		//return fetched data
+        return ($query->num_rows() > 0)?$query->result():FALSE;
+	}
+
+	public function avgRating($id){		
+		$this->db->select('AVG(stars) as avg_rating');
+        $this->db->from('reviews r');
+		$this->db->where('r.listing_id',$id);
+		$this->db->where('r.is_visible','1');
+		$query = $this->db->get();
+		//return fetched data
+        return ($query->num_rows() > 0)?$query->row():FALSE;
+	}
+
 	public function popular_projects($id, $type){		
 		$this->db->select('p.*');
         $this->db->from('projects p');

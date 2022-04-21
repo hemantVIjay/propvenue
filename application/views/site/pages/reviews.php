@@ -1,49 +1,26 @@
 <div class="row gx-2 mb-4">
+	<?php foreach($project_reviews as $review){ ?>
 	<div class="col-sm-4 mb-3">
 		<div class="card">
 			<div class="card-body">
-				<span class="badge bg-success fw-bold">3.5/5<i class="bi bi-star-fill ms-2"></i></span>
-				<p class="my-3">Nice builder floor apartment. I have very good experience with the builder, good communication, good service, and nice people, flats are nice and basic facilities, metro connectivity is also there.</p>
+	<span class="badge <?php if($review->stars >= '2.5'){ echo'bg-success'; }elseif($review->stars <= '2'){ echo'bg-danger'; };?> fw-bold"><?= $review->stars; ?>/5<i class="bi bi-star-fill ms-2"></i></span>
+				<p class="my-3"><?= $review->message; ?></p>
 				<div class="d-flex">
-					<span class="rwsn text-center rounded-circle fw-bold fs-6">AB</span>
+				<?php $uname = 'Anonymous'; if($review->user_id!=''){ $user = get_user($review->user_id); $uname = $user['full_name']; }  ?>
+					<span class="rwsn text-center rounded-circle fw-bold fs-6"><?php $words = explode(" ", $uname);
+					$acronym = "";
+					foreach ($words as $w) {
+						$acronym .= $w[0];
+					} echo$acronym; ?></span>
 					<div>
-						<div class="rwnm fw-bold">Amit Bharadwaj</div>
-						<div class="rwdt text-gray">20-Apr-2022</div>
+						<div class="rwnm fw-bold"><?= $uname; ?></div>
+						<div class="rwdt text-gray"><?= date('d-M-Y',strtotime($review->date_publish)); ?></div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>	
-	<div class="col-sm-4 mb-3">
-		<div class="card">
-			<div class="card-body">
-				<span class="badge bg-danger fw-bold">1.5/5<i class="bi bi-star-fill ms-2"></i></span>
-				<p class="my-3">Nice builder floor apartment. I have very good experience with the builder, good communication, good service, and nice people, flats are nice and basic facilities, metro connectivity is also there.</p>
-				<div class="d-flex">
-					<span class="rwsn text-center rounded-circle fw-bold fs-6">RY</span>
-					<div>
-						<div class="rwnm fw-bold">Rajkumar Yadav</div>
-						<div class="rwdt text-gray">20-Apr-2022</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="col-sm-4 mb-3">
-		<div class="card">
-			<div class="card-body">
-				<span class="badge bg-success fw-bold">4.5/5<i class="bi bi-star-fill ms-2"></i></span>
-				<p class="my-3">Nice builder floor apartment. I have very good experience with the builder, good communication, good service, and nice people, flats are nice and basic facilities, metro connectivity is also there.</p>
-				<div class="d-flex">
-					<span class="rwsn text-center rounded-circle fw-bold fs-6">RS</span>
-					<div>
-						<div class="rwnm fw-bold">Rini Saini</div>
-						<div class="rwdt text-gray">20-Apr-2022</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<?php } ?>
 </div>
 
 <form id="reviews" action="<?= base_url('home/save_review'); ?>" method="POST" enctype="multipart/form-data" accept-charset="utf-8" autocomplete="off">
