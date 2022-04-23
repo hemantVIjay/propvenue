@@ -261,6 +261,18 @@ class Home_model extends MY_Model{
         return ($query->num_rows() > 0)?$query->row():FALSE;
 	}
 
+	public function _topRating($id){		
+		$this->db->select('r.*');
+        $this->db->from('reviews r');
+		$this->db->where('r.listing_id',$id);
+		$this->db->where('r.is_visible','1');
+		$this->db->limit(3,0);
+		$this->db->order_by('r.id','desc');
+		$query = $this->db->get();
+		//return fetched data
+        return ($query->num_rows() > 0)?$query->result():FALSE;
+	}
+
 	public function popular_projects($id, $type){		
 		$this->db->select('p.*');
         $this->db->from('projects p');

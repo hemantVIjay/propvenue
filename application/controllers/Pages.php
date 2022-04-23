@@ -305,10 +305,17 @@
       
        public function feedback_review()
        {
-           $data['title']       = 'Propvenues.com';
+           $slug = $this->uri->segment(1);
+		   $details = $this->home->get_slugDetails($slug);
+           if (empty($details)) {
+             $this->error404();
+           }
+		   $all_reviews  = $this->home->all_reviews($details->id);
+		   $data['title']       = 'Propvenues.com';
            $data['description'] = 'Propvenues.com';
            $data['keywords']    = 'Propvenues.com';
 		   $data['is_search']   = FALSE;;
+		   $data['all_reviews']   = $all_reviews;
            $data['sub_view'] = $this->load->view('site/pages/feedback-review', $data, TRUE);
            $this->load->view('site/_layout', $data);
        }
@@ -358,13 +365,15 @@
                    }
 				   $p_arr = array('name'=>'project','parent_id'=>$id);
                    $pc = _getlisting($p_arr);
-				   $reviews  = $this->home->all_reviews($pc->id);
+				   $reviews  = $this->home->_topRating($pc->id);
 				   $avg_rating  = $this->home->avgRating($pc->id);
+				   $all_reviews  = $this->home->all_reviews($pc->id);
                    //$project_properties = $this->project->get_projectProperties($id[1]);
                    $data['project_info']      = $project_info;
                    $data['floor_plans']       = $project_info;
                    $data['properties_images'] = $i_arr;
                    $data['project_reviews']   = $reviews;
+                   $data['all_reviews']       = (!empty($all_reviews)) ? count($all_reviews) : 0;
                    $data['avg_rating']        = $avg_rating;
                    $data['is_search']         = TRUE;
                    $data['sub_view']          = $this->load->view('site/pages/project-details', $data, TRUE);

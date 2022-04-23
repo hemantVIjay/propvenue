@@ -340,9 +340,21 @@
 					<div class="rwc">
 						<div class="rwcb mb-2">
 							<span class="badge bg-success fw-bold me-2"><?php echo number_format($avg_rating->avg_rating,1); ?>/5</span>
-							<span class="strrw"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i></span>
+							<?php
+								echo "<span class='strrw'>";
+								for ( $i = 1; $i <= 5; $i++ ) {
+									if ( round( $avg_rating->avg_rating - .25 ) >= $i ) {
+										echo "<i class='bi bi-star-fill'></i>";
+									} elseif ( round( $avg_rating->avg_rating + .25 ) >= $i ) {
+										echo "<i class='bi bi-star-half'></i>";
+									} else {
+										echo "<i class='bi bi-star'></i>";
+									}
+								}
+								echo '</span>';?>
 						</div>
-						<div class="ttlrw">(<?php if(!empty($project_reviews)){ echo count($project_reviews); }else{ echo'0'; } ?> Total Reviews)</div>
+						<?php $linfo = _listingInfo('project', $project_info->id); ?>
+						<div class="ttlrw"><a href="<?= base_url();?><?= (isset($linfo->url))? $linfo->url : ''; ?>/feedback-review">(<?php echo$all_reviews; ?> Total Reviews)</a></div>
 					</div>
 				</div>
 			</div>
